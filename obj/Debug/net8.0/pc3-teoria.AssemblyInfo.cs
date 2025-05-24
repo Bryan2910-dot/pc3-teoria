@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("pc3-teoria")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78ef9a1dffb453f24a2d23541bac106def2fc9dc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa0bdc43a799f787f26bcc643459688a9b268d6d")]
 [assembly: System.Reflection.AssemblyProductAttribute("pc3-teoria")]
 [assembly: System.Reflection.AssemblyTitleAttribute("pc3-teoria")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
