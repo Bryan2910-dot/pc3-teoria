@@ -18,6 +18,8 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddScoped<IFeedbackService, FeedbackService>();
 builder.Services.AddHttpClient<INewsService, NewsService>();
 
+builder.Services.AddHttpClient<ApiService>();
+
 builder.Services.AddControllers();
 builder.Services.AddControllersWithViews();
 

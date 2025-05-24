@@ -1,0 +1,17 @@
+@model pc3_teoria.Models.PostWithExtrasViewModel
+
+<h2>@Model.Title</h2>
+<p>@Model.Body</p>
+<p><strong>Autor:</strong> @Model.AuthorName</p>
+
+<h3>Comentarios</h3>
+<ul>
+@foreach (var c in Model.Comments) {
+    <li>@c</li>
+}
+</ul>
+
+<form method="post" asp-action="React" asp-route-id="@Model.Id">
+    <button type="submit" name="sentimiento" value="like">👍 Me gustó</button>
+    <button type="submit" name="sentimiento" value="dislike">👎 No me gustó</button>
+</form>
