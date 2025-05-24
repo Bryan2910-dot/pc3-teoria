@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using pc3_teoria.Data;
+using pc3_teoria.Interfaces;
+using pc3_teoria.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +14,11 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
+
+builder.Services.AddScoped<IFeedbackService, FeedbackService>();
+builder.Services.AddHttpClient<INewsService, NewsService>();
+
+builder.Services.AddControllers();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -39,5 +46,7 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
+
+app.MapControllers();
 
 app.Run();
