@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using pc3_teoria.Models;
 
 namespace pc3_teoria.Data;
 
@@ -9,4 +10,5 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
+    public DbSet<Feedback> Feedbacks { get; set; }
 }
